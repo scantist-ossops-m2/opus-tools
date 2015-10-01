@@ -847,8 +847,8 @@ int main(int argc, char **argv)
 
   /*Write header*/
   {
-    unsigned char header_data[100];
-    int packet_size=opus_header_to_packet(&header, header_data, 100);
+    unsigned char header_data[276];
+    int packet_size=opus_header_to_packet(&header, header_data, sizeof(header_data));
     op.packet=header_data;
     op.bytes=packet_size;
     op.b_o_s=1;

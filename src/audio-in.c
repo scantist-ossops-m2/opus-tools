@@ -1014,8 +1014,8 @@ int setup_resample(oe_enc_opt *opt, int complexity, long outfreq) {
     opt->read_samples = read_resampled;
     opt->readdata = rs;
     if(opt->total_samples_per_channel)
-        opt->total_samples_per_channel = (int)((float)opt->total_samples_per_channel *
-            ((float)outfreq/(float)opt->rate));
+        opt->total_samples_per_channel = (opus_int64)(opt->total_samples_per_channel *
+            ((double)outfreq/opt->rate));
     opt->rate = outfreq;
 
     return 0;

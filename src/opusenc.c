@@ -578,7 +578,7 @@ int main(int argc, char **argv)
         } else if(strcmp(long_options[option_index].name,"discard-pictures")==0){
           inopt.copy_pictures=0;
         }
-        /*Commands whos arguments would leak file paths or just end up as metadata
+        /*Commands whose arguments would leak file paths or just end up as metadata
            should have save_cmd=0; to prevent them from being saved in the
            command-line tag.*/
         break;
@@ -648,7 +648,7 @@ int main(int argc, char **argv)
 
   if(inopt.rate<100||inopt.rate>768000){
     /*Crazy rates excluded to avoid excessive memory usage for padding/resampling.*/
-    fprintf(stderr,"Error parsing input file: %s unhandled sampling rate: %ld hz\n",inFile,inopt.rate);
+    fprintf(stderr,"Error parsing input file: %s unhandled sampling rate: %ld Hz\n",inFile,inopt.rate);
     exit(1);
   }
 
@@ -1107,7 +1107,7 @@ int main(int argc, char **argv)
 
 /*
  Comments will be stored in the Vorbis style.
- It is describled in the "Structure" section of
+ It is described in the "Structure" section of
     http://www.xiph.org/ogg/vorbis/doc/v-comment.html
 
  However, Opus and other non-vorbis formats omit the "framing_bit".

@@ -175,10 +175,10 @@ void help_picture(void)
   printf("  SPECIFICATION is a string whose parts are separated by | (pipe)\n");
   printf("  characters. Some parts may be left empty to invoke default values.\n");
   printf("  A plain FILENAME is just shorthand for \"||||FILENAME\".\n");
-  printf("  \n");
+  printf("\n");
   printf("  The format of SPECIFICATION is:\n");
   printf("  [TYPE]|[MEDIA-TYPE]|[DESCRIPTION]|[WIDTHxHEIGHTxDEPTH[/COLORS]]|FILENAME\n");
-  printf("  \n");
+  printf("\n");
   printf("  TYPE is an optional number from one of:\n");
   printf("     0: Other\n");
   printf("     1: 32x32 pixel 'file icon' (PNG only)\n");
@@ -201,20 +201,20 @@ void help_picture(void)
   printf("    18: Illustration\n");
   printf("    19: Band/artist logotype\n");
   printf("    20: Publisher/studio logotype\n");
-  printf("  \n");
+  printf("\n");
   printf("  The default is 3 (front cover). More than one --picture option can\n");
   printf("  be specified to attach multiple pictures. There may only be one\n");
   printf("  picture each of type 1 and 2 in a file.\n");
-  printf("  \n");
+  printf("\n");
   printf("  MEDIA-TYPE is optional. If left blank, it will be detected from the\n");
   printf("  file. For best compatibility with players, use pictures with a\n");
   printf("  MEDIA-TYPE of image/jpeg or image/png. The MEDIA-TYPE can also be\n");
   printf("  \"-->\" to mean that FILENAME is actually a URL to an image, though\n");
   printf("  this use is discouraged. The file at the URL will not be fetched.\n");
   printf("  The URL itself is stored in the metadata.\n");
-  printf("  \n");
+  printf("\n");
   printf("  DESCRIPTION is optional. The default is an empty string.\n");
-  printf("  \n");
+  printf("\n");
   printf("  The next part specifies the resolution and color information. If\n");
   printf("  the MEDIA-TYPE is image/jpeg, image/png, or image/gif, this can\n");
   printf("  usually be left empty and the information will be read from the\n");
@@ -222,7 +222,7 @@ void help_picture(void)
   printf("  pixels, and color depth in bits-per-pixel. If the image has indexed\n");
   printf("  colors you should also specify the number of colors used. If possible,\n");
   printf("  these are checked against the file for accuracy.\n");
-  printf("  \n");
+  printf("\n");
   printf("  FILENAME is the path to the picture file to be imported, or the URL\n");
   printf("  if the MEDIA-TYPE is \"-->\".\n");
 }
@@ -1066,7 +1066,7 @@ int main(int argc, char **argv)
   if(!quiet){
     double coded_seconds=nb_encoded/(double)coding_rate;
     double wall_time=(stop_time-start_time)+1e-6;
-    fprintf(stderr,"Encoding complete                                    \n");
+    fprintf(stderr,"Encoding complete\n");
     fprintf(stderr,"-----------------------------------------------------\n");
     fprintf(stderr,"       Encoded:");
     print_time(coded_seconds);

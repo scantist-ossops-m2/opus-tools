@@ -697,7 +697,7 @@ int main(int argc, char **argv)
 
   /*Initialize OPUS encoder*/
   /*Framesizes <10ms can only use the MDCT modes, so we switch on RESTRICTED_LOWDELAY
-    to save the extra 2.5ms of codec lookahead when we'll be using only small frames.*/
+    to save the extra 4ms of codec lookahead when we'll be using only small frames.*/
   st=opus_multistream_surround_encoder_create(coding_rate, chan, header.channel_mapping, &header.nb_streams, &header.nb_coupled,
      header.stream_map, frame_size<480/(48000/coding_rate)?OPUS_APPLICATION_RESTRICTED_LOWDELAY:OPUS_APPLICATION_AUDIO, &ret);
   if(ret!=OPUS_OK){

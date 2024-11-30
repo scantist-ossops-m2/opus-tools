@@ -60,7 +60,7 @@ typedef struct
 
 typedef struct {
     short format;
-    unsigned short channels;
+    short channels;
     int samplerate;
     int bytespersec;
     short align;
@@ -69,7 +69,7 @@ typedef struct {
 } wav_fmt;
 
 typedef struct {
-    unsigned short channels;
+    short channels;
     short samplesize;
     opus_int64 totalsamples;
     opus_int64 samplesread;
